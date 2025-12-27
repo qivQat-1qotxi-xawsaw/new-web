@@ -1,3 +1,5 @@
+
+
 <!DOCYTYPE html>
 <html lang="ja">
 <head>
@@ -12,15 +14,19 @@
                 pause: 5000,
             });
         });
+     
+
 </script>
 
 
 <style>
 
 
-body{
- background-color:#98fb98;
-
+body {
+    font-family: Arial, sans-serif;
+    background-color:#98fb98;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -28,17 +34,167 @@ h2{
  background-color:#555555;
 }
 
+/* ボタン全体 */
+#page_top {
+width: 100px;
+height: 100px;
+position: fixed;
+right: 10px;
+bottom: 10px;
+background: #e25407;
+border-radius: 50%;
+opacity: 0.6;
+}
+
+/* Font Awesome */
+#page_top::before {
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+content: '\f0d8';
+font-size: 50px;
+color: rgb(255, 255, 255);
+position: absolute;
+top: 50%;
+left: 50%;
+translate: -50% -50%;
+}
 
 
+        h2 {
+            display: inline-block;
+            position: relative;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
+        h2::before,
+        h2::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 15px;
+            background-color: white;
+        }
 
+        h2::before {
+            left: -15px;
+            box-shadow: -20px 0 0 0 black, -40px 0 0 0 black;
+        }
 
+        h2::after {
+            right: -15px;
+            box-shadow: 20px 0 0 0 black, 40px 0 0 0 black;
+        }
 
+.update-info {
+  background: linear-gradient(to right, #00bfff, #87ceeb); /* 水色のグラデーション */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  color: white; /* 白文字 */
+  font-family: 'Verdana', sans-serif;
+  text-align: center; /* テキストを中央揃え */
+}
 
+/* メニューを中央揃え */
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
 
+/* メニューアイテム */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
+.menu li {
+    position: relative;
+    margin: 0 15px;
+}
 
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
 
+/* ドロップダウンメニュー */
+.menu .dropdown-menu {
+    display: none;  /* 初期状態は非表示 */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    border-radius: 5px;
+    z-index: 9999;  /* 他の要素より前面に表示 */
+}
+
+/* 各項目 */
+.menu .dropdown-menu li {
+    padding: 10px;
+}
+
+.menu .dropdown-menu li a {
+    color: #333;
+    display: block;
+    padding: 8px 15px;
+}
+
+/* ホバー時にメニューを表示 */
+.menu .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.ribbon {
+  position: relative;
+  display: inline-block;
+  background: #90ee90; /* 薄い緑 */
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 24px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.ribbon::before,
+.ribbon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 15px solid transparent;
+  z-index: -1;
+}
+
+.ribbon::before {
+  left: -30px;
+  border-right-color: #90ee90;
+}
+
+.ribbon::after {
+  right: -30px;
+  border-left-color: #90ee90;
+}
 </style>
 
 
@@ -52,8 +208,60 @@ h2{
 <body>
 
 
- <center><h2>　<a href="yougaku.html">洋楽</a>　　<a href="game.html">ゲームソング</a> <a href="cs.html">クラシック</a> <a href="taiko.html">太鼓の達人</a></h2></center>
- 
+ <center>
+   
+
+</body>
+
+    </center>
+ <body>
+
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="yougaku.html">洋楽 ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">ポップ</a></li>
+                    <li><a href="#">ロック</a></li>
+                    <li><a href="#">ジャズ</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="game.html">ゲームソング ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="KH.html">キングダムハーツ</a></li>
+                    <li><a href="#">アクション</a></li>
+                    <li><a href="#">シューティング</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="ssss.html">クラシック ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="baroc.html">鉄道音楽メドレー</li>
+                    <li><a href="romantic.html">ロマン派</a></li>
+                    <li><a href="modern.html">現代音楽</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="taiko.html">太鼓の達人 ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Drum.html">グリーンデイ</a></li>
+                    <li><a href="#">クイーン</a></li>
+                    <li><a href="hougaku.html">邦楽ロック</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="anime.html">アニメ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="anime2.html">スタジオジブリ</a></li>
+                    <li><a href="#">ボーカロイド</a></li>
+                    <li><a href="#">オリジナル楽曲</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
+<h1 class="ribbon">🎵音楽でつながる心　ピアノを紹介します🎵</h1>
 <title>ピアノを紹介します</title>
 <div class="slider">
 <img src="IMG_2192.HEIC" width="300" height="500" alt="">
@@ -65,22 +273,55 @@ h2{
 
 </h3>
 
-<center><h1>更新情報</h1></center>
 
-<center>=ザナルカンドにてを追加=</center>
+
+
 <center>
 
+<div class="update-info">
+  <h2>更新情報</h2>
+  <ul>
+    <li>Last christmas を追加</l><br>
 
-エンジェルドリームを追加<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OA38QS_Hfic?si=WOGsdSfJb5TU_wKG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ 
+    
+
+ 
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yK4bAnafj2Q?si=v6QPM_vVm_GruTZj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</center>
-</head>
-<h2><center><p.honbun>Copy all rights all rights reserved</center></p></h2>
+
+     
+
+
+
+
+
+
+    
+
+        
+  </ul>
+</div>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/njtPL7nON_Y?si=FS2wwAw5ec_hd-Mr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<br>
+        <img src="IMG_0819.PNG" width="500" height="150" alt="">
+        </center>
+        <a href="#" id="page_top"></a>
+<h2><center><p.honbun>@2025 Enjoy Music!All Right Reserved</p></h2></center>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
 
